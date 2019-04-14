@@ -1,0 +1,19 @@
+kubectl create ns kf-tutorial
+
+ks init kf-tutorial
+
+cd kf-tutorial
+
+ks env add cdk
+
+ks registry add kubeflow github.com/lhernandez-free/kubeflow/tree/master/kubeflow
+
+ks pkg install kubeflow/tf-serving
+
+ks pkg install kubeflow/tf-training
+
+ks param list
+
+ks appaly cdk -c "folder"
+
+ks generate tf-cnn kubeflow-test --name=cdk-tf-cnn --namespace=kf-tutorial
