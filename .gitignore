@@ -1,3 +1,4 @@
+.idea
 /lib
 /.ksonnet/registries
 /app.override.yaml
