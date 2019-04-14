@@ -1,0 +1,24 @@
+apiVersion: 0.3.0
+environments:
+  cdk:
+    destination:
+      namespace: default
+      server: https://192.168.99.104:8443
+    k8sVersion: v1.14.0
+    path: cdk
+  default:
+    destination:
+      namespace: default
+      server: https://192.168.99.104:8443
+    k8sVersion: v1.14.0
+    path: default
+kind: ksonnet.io/app
+name: kf-tutorial
+registries:
+  incubator:
+    protocol: github
+    uri: github.com/ksonnet/parts/tree/master/incubator
+  kubeflow:
+    protocol: github
+    uri: github.com/lhernandez-free/kubeflow/tree/master/kubeflow
+version: 0.0.1
